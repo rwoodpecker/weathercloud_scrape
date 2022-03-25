@@ -3,11 +3,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 import time
-import configparser
+from configparser import ConfigParser, ExtendedInterpolation
 import os
 import sys
 
-config_access = configparser.ConfigParser()
+config_access = ConfigParser(interpolation=ExtendedInterpolation())
 config_location = os.path.join(
     os.path.expanduser("~"), ".config", "weathercloud_scrape.ini"
 )
